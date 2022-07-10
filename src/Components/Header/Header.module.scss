@@ -1,0 +1,47 @@
+@import '../../styles/mixins.scss';
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 20px;
+}
+
+.wrapper {
+   display: flex;
+   align-items: center;
+
+   .logo {
+      @include adaptive(margin-right, 20, 10);
+
+      svg {
+         @include adaptive(width, 54, 46);
+      }
+
+
+   }
+
+   .title {
+      @include adaptive(font-size, 25, 16);
+      font-weight: 700;
+      text-transform: uppercase;
+
+   }
+
+   .select {
+      @include adaptive(width, 194, 140);
+      @include adaptive(height, 37, 37);
+
+   }
+
+   .change_theme {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      svg {
+         @include adaptive(width, 35, 35);
+      }
+
+
+   }
+}
